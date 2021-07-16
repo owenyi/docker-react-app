@@ -4,8 +4,9 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY ./ ./
 
-RUN ["npm", "run", "start"]
+# CMD ["yarn", "run", "start"]
+RUN ["yarn", "run", "start"]
