@@ -1,9 +1,9 @@
 FROM node:12 as builder
 WORKDIR /usr/src/app
 COPY package.json ./
-RUN yarn install
+RUN npm install
 COPY ./ ./
-CMD ["yarn", "run", "start"]
+CMD ["npm", "run", "start"]
 
 FROM nginx
 EXPOSE 80
