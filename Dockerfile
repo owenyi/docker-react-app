@@ -3,7 +3,8 @@ WORKDIR /usr/src/app
 COPY package.json ./
 RUN yarn install
 COPY ./ ./
-RUN ["yarn", "run", "start"]
+# CMD ["yarn", "run", "start"]
+RUN yarn run start
 
 FROM nginx
 EXPOSE 80
